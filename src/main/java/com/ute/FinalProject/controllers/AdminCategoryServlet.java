@@ -11,24 +11,16 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "AdminCategoryServlet", value = "/home/category/*")
+@WebServlet(name = "AdminCategoryServlet", value = "/admin/category/*")
 public class AdminCategoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = request.getPathInfo();
+        if (path == null || path.equals("/")) {
+            path = "/index";
+        }
         switch (path) {
-//            case "/index":
-//                ServletUtils.forward("/views/home/index.jsp",request,response);
-//                break;
-//            case "/login":
-//                ServletUtils.forward("/views/login/login.jsp",request,response);
-//                break;
-//            case "/register":
-//                ServletUtils.forward("/views/login/register.jsp",request,response);
-//                break;
-//            case "/product":
-//                ServletUtils.forward("/views/product/index.jsp",request,response);
-//                break;
+//
             case "/index":
                 List<Category> list = CategoryModel.findAll();
                 request.setAttribute("categories",list);

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ProductModel {
     public static List<Product> findAll () {
-        Sql2o sql2o = new Sql2o("jdbc:mysql://localhost:3306/abc", "root" , "");
+        Sql2o sql2o = new Sql2o("jdbc:mysql://localhost:3306/huynh", "root" , "");
         final String query = "select * from products";
         try (Connection con = sql2o.open()) {
             return con.createQuery(query)
