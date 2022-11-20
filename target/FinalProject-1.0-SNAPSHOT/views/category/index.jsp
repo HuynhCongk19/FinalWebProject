@@ -8,9 +8,17 @@
 <t:main>
   <jsp:body>
     <div class="card">
-      <h4 class="card-header">
-        Categories
-      </h4>
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product Type</th>
+        <th scope="col">
+          <a name="" id="" class="btn btn-sm btn-outline-success" href="${pageContext.request.contextPath}/home/category/add" role="button">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </a>
+        </th>
+      </tr>
+      </thead>
       <c:choose>
         <c:when test="${categories.size() == 0}">
           <div class="card-body">
