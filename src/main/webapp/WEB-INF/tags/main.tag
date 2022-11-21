@@ -1,4 +1,7 @@
 <%@ tag pageEncoding="UTF-8" %>
+<%@attribute name="css" fragment="true" required="false" %>
+<%@attribute name="js" fragment="true" required="false" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +9,14 @@
     <title>Auctions</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <jsp:invoke fragment="css" />
 </head>
 <body>
 
 <jsp:include page="../../views/partials/nav.jsp"/>
 <div class="container-fluid mt-3">
     <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <jsp:include page="../../views/partials/left.jsp"/>
         </div>
         <div class="col-sm-9">

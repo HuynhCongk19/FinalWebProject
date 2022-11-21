@@ -5,23 +5,30 @@ import java.util.Calendar;
 
 
 public class Product {
-    private int ProID;
+
     private String ProName, TinyDes, FullDes;
-    private int Price, CatID , PriceDifference;
+    private int ProID,Price, CatID , PriceDifference;
     private Calendar  StartDate , EndDate;
     public Product() {
     }
+    public Product(int proID, String proName, String tinyDes, String fullDes,int price,  int priceDifference, int catID) {
+        this.ProID = proID;
+        this.ProName = proName;
+        this.TinyDes = tinyDes;
+        this.FullDes = fullDes;
+        this.Price = price;
+        this.PriceDifference = priceDifference;
+        this.CatID = catID;
+    }
+    public Product( String proName, String tinyDes, String fullDes,int price,  int priceDifference, int catID) {
+        this.ProID=-1;
+        this.ProName = proName;
+        this.TinyDes = tinyDes;
+        this.FullDes = fullDes;
+        this.Price = price;
+        this.PriceDifference = priceDifference;
+        this.CatID = catID;
 
-    public Product(int proID, String proName, String tinyDes, String fullDes, int price, int catID, Calendar startDate , Calendar endDate, int priceDifference) {
-        ProID = proID;
-        ProName = proName;
-        TinyDes = tinyDes;
-        FullDes = fullDes;
-        Price = price;
-        CatID = catID;
-        PriceDifference = priceDifference;
-        StartDate = startDate;
-        EndDate = endDate;
     }
 
     public int getProID() {

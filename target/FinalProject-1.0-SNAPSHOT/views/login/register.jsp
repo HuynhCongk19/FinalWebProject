@@ -64,6 +64,10 @@
 
     #logreg-forms button[type="submit"]{ margin-top:10px; }
 
+    #logreg-forms .facebook-btn{  background-color:#3C589C; }
+
+    #logreg-forms .google-btn{ background-color: #DF4B3B; }
+
     #logreg-forms .form-reset, #logreg-forms .form-signup{ display: none; }
 
     #logreg-forms .form-signup .social-btn{ width:210px; }
@@ -101,7 +105,13 @@
       #logreg-forms .social-btn span{
         display: none;
       }
+      #logreg-forms  .facebook-btn:after{
+        content:'Facebook';
+      }
 
+      #logreg-forms  .google-btn:after{
+        content:'Google+';
+      }
     }
   </style>
   <title>Account</title>
@@ -110,6 +120,11 @@
 <div id="logreg-forms">
   <form class="form-signin">
     <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">New Account</h1>
+    <div class="social-login">
+      <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
+      <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
+    </div>
+    <p style="text-align:center">OR</p>
     <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
     <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
     <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
