@@ -17,7 +17,7 @@
                     <th scope="col">PriceDifference</th>
                     <th scope="col">CatID</th>
                     <th scope="col">
-                        <a  id="" class="btn btn-sm btn-outline-success" href="${pageContext.request.contextPath}/home/product/add" role="button">
+                        <a  id="" class="btn btn-sm btn-outline-success" href="${pageContext.request.contextPath}/admin/product/add" role="button">
                             <i class="fa fa-plus" aria-hidden="true"></i>
                             Add Product
                         </a>

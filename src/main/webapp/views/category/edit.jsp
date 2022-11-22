@@ -22,15 +22,15 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a class="btn btn-outline-success" href="${pageContext.request.contextPath}/Admin/Category/" role="button">
+                    <a class="btn btn-outline-success" href="${pageContext.request.contextPath}/admin/category/" role="button">
                         <i class="fa fa-backward" aria-hidden="true"></i>
                         List
                     </a>
-                    <button type="submit" class="btn btn-danger" formaction="${pageContext.request.contextPath}/Admin/Category/Delete">
+                    <button type="submit" class="btn btn-danger" formaction="${pageContext.request.contextPath}/admin/category/delete">
                         <i class="fa fa-trash-o" aria-hidden="true"></i>
                         Delete
                     </button>
-                    <button type="submit" class="btn btn-primary" formaction="${pageContext.request.contextPath}/Admin/Category/Update">
+                    <button type="submit" class="btn btn-primary" formaction="${pageContext.request.contextPath}/admin/category/update">
                         <i class="fa fa-check" aria-hidden="true"></i>
                         Save
                     </button>

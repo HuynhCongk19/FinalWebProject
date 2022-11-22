@@ -10,7 +10,7 @@ import org.sql2o.Connection;
 import java.util.List;
 
 public class ProductModel {
-    public static List<Product> findAll () {
+    public static List<Product> findAll() {
         final String query = "select * from products";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)

@@ -13,7 +13,7 @@
         <th scope="col">#</th>
         <th scope="col">Product Type</th>
         <th scope="col">
-          <a name="" id="" class="btn btn-sm btn-outline-success" href="${pageContext.request.contextPath}/home/category/add" role="button">
+          <a name="" id="" class="btn btn-sm btn-outline-success" href="${pageContext.request.contextPath}/admin/category/add" role="button">
             <i class="fa fa-plus" aria-hidden="true"></i>
           </a>
         </th>
@@ -41,7 +41,7 @@
                   <td>${c.catID}</td>
                   <td>${c.catName}</td>
                   <td class="text-right">
-                    <a class="btn btn-sm btn-outline-primary" href="#" role="button">
+                    <a class="btn btn-sm btn-outline-primary" href="${pageContext.request.contextPath}/admin/category/edit?id=${c.catID}" role="button">
                       <i class="fa fa-pencil" aria-hidden="true"></i>
                     </a>
                   </td>

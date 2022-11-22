@@ -4,9 +4,9 @@
     <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
       Category
     </button>
-    <a href="${pageContext.request.contextPath}/home/category"><button type="button" class="list-group-item list-group-item-action" >Iphone 13 Pro Max</button></a>
-    <a href="${pageContext.request.contextPath}/admin/product"><button type="button" class="list-group-item list-group-item-action">Laptop Asus</button></a>
-    <a href="${pageContext.request.contextPath}/admin/category"><button type="button" class="list-group-item list-group-item-action">Laptop Asus</button></a>
+    <a href="${pageContext.request.contextPath}/home/category/"><button type="button" class="list-group-item list-group-item-action" >Iphone 13 Pro Max</button></a>
+    <a href="${pageContext.request.contextPath}/admin/product/"><button type="button" class="list-group-item list-group-item-action">Laptop Asus</button></a>
+    <a href="${pageContext.request.contextPath}/admin/category/"><button type="button" class="list-group-item list-group-item-action">Laptop Asus</button></a>
     <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item </button>
   </div>
 </div>
