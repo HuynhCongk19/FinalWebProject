@@ -132,7 +132,7 @@
 
     <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
     <hr>
-    <a href="${pageContext.request.contextPath}/home/login" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+    <a href="${pageContext.request.contextPath}/Home/Login" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
   </form>
   <br>
 </div>

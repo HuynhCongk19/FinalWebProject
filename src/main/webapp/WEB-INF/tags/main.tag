@@ -40,7 +40,13 @@
             </nav>
         </div>
     </div>
-
+    <div class="card border-primary">
+        <img class="card-img-top" src="holder.js/100px180/" alt="">
+        <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <p class="card-text">Text</p>
+        </div>
+    </div>
 </div>
 <footer>
 
@@ -54,5 +60,4 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
 </body>
-
 </html>

@@ -13,31 +13,23 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "HomeServlet", value = "/home/*")
+@WebServlet(name = "HomeServlet", value = "/Home/*")
 public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = request.getPathInfo();
         if (path == null || path.equals("/")) {
-            path = "/index";
+            path = "/Index";
         }
         switch (path) {
-            case "/index":
-                ServletUtils.forward("/views/home/index.jsp",request,response);
+            case "/Index":
+                ServletUtils.forward("/views/vwHome/Index.jsp",request,response);
                 break;
-            case "/product":
-                ServletUtils.forward("/views/product/index.jsp",request,response);
+            case "/Login":
+                ServletUtils.forward("/views/vwAccount/Login.jsp",request,response);
                 break;
-            case "/category":
-                ServletUtils.forward("/views/category/index.jsp",request,response);
-                List<Category> list = CategoryModel.findAll();
-                request.setAttribute("categories",list);
-                break;
-            case "/login":
-                ServletUtils.forward("/views/login/login.jsp",request,response);
-                break;
-            case "/register":
-                ServletUtils.forward("/views/login/register.jsp",request,response);
+            case "/Register":
+                ServletUtils.forward("/views/vwAccount/Register.jsp",request,response);
                 break;
             default:
                 ServletUtils.forward("/views/404.jsp",request,response);

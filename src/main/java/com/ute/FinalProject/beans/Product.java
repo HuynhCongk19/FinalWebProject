@@ -1,34 +1,22 @@
 package com.ute.FinalProject.beans;
 
-import java.util.Date;
-import java.util.Calendar;
-
 
 public class Product {
-
+    private int ProID;
     private String ProName, TinyDes, FullDes;
-    private int ProID,Price, CatID , PriceDifference;
-    private Calendar  StartDate , EndDate;
+    private int Price, Quantity, CatID;
+
     public Product() {
     }
-    public Product(int proID, String proName, String tinyDes, String fullDes,int price,  int priceDifference, int catID) {
-        this.ProID = proID;
-        this.ProName = proName;
-        this.TinyDes = tinyDes;
-        this.FullDes = fullDes;
-        this.Price = price;
-        this.PriceDifference = priceDifference;
-        this.CatID = catID;
-    }
-    public Product( String proName, String tinyDes, String fullDes,int price,  int priceDifference, int catID) {
-        this.ProID=-1;
-        this.ProName = proName;
-        this.TinyDes = tinyDes;
-        this.FullDes = fullDes;
-        this.Price = price;
-        this.PriceDifference = priceDifference;
-        this.CatID = catID;
 
+    public Product(int proID, String proName, String tinyDes, String fullDes, int price, int quantity, int catID) {
+        ProID = proID;
+        ProName = proName;
+        TinyDes = tinyDes;
+        FullDes = fullDes;
+        Price = price;
+        Quantity = quantity;
+        CatID = catID;
     }
 
     public int getProID() {
@@ -51,16 +39,11 @@ public class Product {
         return Price;
     }
 
+    public int getQuantity() {
+        return Quantity;
+    }
 
     public int getCatID() {
         return CatID;
     }
-
-    public int getPriceDifference() {
-        return PriceDifference;
-    }
-
-//    public Date getStartDate() { return StartDate; }
-//
-//    public Date getEndDate() { return EndDate; }
 }

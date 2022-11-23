@@ -3,24 +3,17 @@ package com.ute.FinalProject.models;
 import com.ute.FinalProject.beans.Category;
 import com.ute.FinalProject.utils.DbUtils;
 import org.sql2o.Connection;
-import org.sql2o.Sql2o;
 
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CategoryModel {
-    public static List<Category> findAll () {
-
-         Sql2o sql2o = new Sql2o("jdbc:mysql://localhost:3306/huynh", "root" , "");
+    public static List<Category> findAll() {
         final String query = "select * from categories";
-        try (Connection con = sql2o.open()) {
+        try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .executeAndFetch(Category.class);
         }
     }
-
     public static Category findById(int id) {
         final String query = "select * from categories where CatID = :CatID";
         try (Connection con = DbUtils.getConnection()) {
