@@ -4,7 +4,8 @@ public class Category {
     private int CatID;
     private String CatName;
 
-    public Category(int catID, String catName) {
+
+    public Category(int catID, String catName){
         this.CatID = catID;
         this.CatName = catName;
     }

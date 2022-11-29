@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://D:/HK2 2021 2022/LT_Web/19110186-18146144-18146148/abc.sql" dialect="MySQL" />
+    <file url="file://D:/HK2 2021 2022/LT_Web/abc - Copy - Copy.sql" dialect="MySQL" />
+    <file url="file://D:/HK2 2021 2022/LT_Web/abc.sql" dialect="MySQL" />
     <file url="file://D:/HK2 2021 2022/LT_Web/classroom/LN12 - CRUD Categories, JSTL Format/QLBH-MySQL-v3.sql" dialect="MySQL" />
+    <file url="file://D:/HK2 2021 2022/LT_Web/dat1.sql" dialect="MySQL" />
     <file url="PROJECT" dialect="MariaDB" />
   </component>
 </project>

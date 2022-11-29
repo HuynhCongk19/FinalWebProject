@@ -8,14 +8,15 @@ import java.util.List;
 
 public class CategoryModel {
     public static List<Category> findAll() {
-        final String query = "select * from categories";
+        final String query = "select * from category";
         try (Connection con = DbUtils.getConnection()) {
             return con.createQuery(query)
                     .executeAndFetch(Category.class);
         }
     }
+
     public static Category findById(int id) {
-        final String query = "select * from categories where CatID = :CatID";
+        final String query = "select * from category where CatID = :CatID";
         try (Connection con = DbUtils.getConnection()) {
             List<Category> list = con.createQuery(query)
                     .addParameter("CatID", id)
@@ -28,7 +29,7 @@ public class CategoryModel {
     }
 
     public static void add(Category c) {
-        String Sql = "insert into categories(CatName) values (:CatName)";
+        String Sql = "insert into category(CatName) values (:CatName)";
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(Sql)
                     .addParameter("CatName", c.getCatName())
@@ -37,7 +38,7 @@ public class CategoryModel {
     }
 
     public static void update(Category c) {
-        String sql = "update categories set CatName = :CatName where CatID = :CatID";
+        String sql = "update category set CatName = :CatName where CatID = :CatID";
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(sql)
                     .addParameter("CatID", c.getCatID())
@@ -48,7 +49,7 @@ public class CategoryModel {
     }
 
     public static void delete(int id) {
-        String sql = "delete from categories where CatID = :CatID";
+        String sql = "delete from category where CatID = :CatID";
         try (Connection con = DbUtils.getConnection()) {
             con.createQuery(sql)
                     .addParameter("CatID",id)
@@ -57,3 +58,6 @@ public class CategoryModel {
 
     }
 }
+
+
+

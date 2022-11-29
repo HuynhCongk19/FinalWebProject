@@ -1,29 +1,51 @@
-<div class="card">
-  <h5 class="card-header">OPTION</h5>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<jsp:useBean id="categoriesWithDetails" scope="request" type="java.util.List<com.ute.FinalProject.beans.Category>"/>
+<jsp:useBean id="AuthUser" scope="session" type="com.ute.FinalProject.beans.User"/>
+
+
+<div class="card text-white bg-info border border-dark">
+  <h4 class="card-header"><i class="fa fa-bars" aria-hidden="true"></i> Menu</h4>
   <div class="list-group">
-    <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
-      Category
-    </button>
-    <a href="#"><button type="button" class="list-group-item list-group-item-action" >Iphone 13 Pro Max</button></a>
-    <a href="${pageContext.request.contextPath}/Admin/Product/"><button type="button" class="list-group-item list-group-item-action">Laptop Asus</button></a>
-    <a href="${pageContext.request.contextPath}/Admin/Category/"><button type="button" class="list-group-item list-group-item-action">Laptop Asus</button></a>
-    <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item </button>
-  </div>
-</div>
-
-<div class="card">
-  <h4 class="card-header">
-    Featured
-  </h4>
-  <div class="list-group list-group-flush">
-    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-      The current link item
+    <a href="${pageContext.request.contextPath}/admin/category/index">
+      <button type="button" class="list-group-item list-group-item-action"><i class="fa fa-list" aria-hidden="true"></i> Category</button>
     </a>
-    <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-    <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-    <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-    <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a>
+    <a href="${pageContext.request.contextPath}/admin/product/index">
+      <button type="button" class="list-group-item list-group-item-action"><i class="fa fa-list" aria-hidden="true"></i> Product</button>
+    </a>
+    <c:forEach items="${categoriesWithDetails}" var="c">
+      <a href="${pageContext.request.contextPath}/product/bycat?id=${c.catID}"
+         class="list-group-item list-group-item-action">
+        <i class="fa fa-caret-right" aria-hidden="true"></i>
+          ${c.catName}
+      </a>
+    </c:forEach>
+    <c:if test="${AuthUser.permission == 2 || AuthUser.permission == 1}">
+    <a href="${pageContext.request.contextPath}/product/byUserID?userid=${AuthUser.id}"
+       class="list-group-item list-group-item-action">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
+      Product is purchased
+    </a>
+      <a href="${pageContext.request.contextPath}/seller/byUserid?userid=${AuthUser.id}"
+         class="list-group-item list-group-item-action">
+        <i class="fa fa-caret-right" aria-hidden="true"></i>
+        Product is end
+      </a>
+    <a href="${pageContext.request.contextPath}/seller/byUserID?userid=${AuthUser.id}"
+       class="list-group-item list-group-item-action">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
+      Products still on auction
+    </a>
+    </c:if>
+    <a href="${pageContext.request.contextPath}/bider/byUserID?userid=${AuthUser.id}"
+       class="list-group-item list-group-item-action">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
+      BidingList
+    </a>
+    <a href="${pageContext.request.contextPath}/bider/byuserID?userid=${AuthUser.id}"
+       class="list-group-item list-group-item-action">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
+      WonList
+    </a>
   </div>
 </div>
-
-

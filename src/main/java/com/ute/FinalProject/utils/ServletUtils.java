@@ -11,13 +11,13 @@ public class ServletUtils {
         RequestDispatcher rd = request.getRequestDispatcher(url);
         rd.forward(request,response);
     }
+
     public static void redirect(String url, HttpServletRequest request, HttpServletResponse response) throws  IOException{
         String contextPath = request.getContextPath();
         int idx = url.indexOf(contextPath);
         if (idx < 0) {
             response.sendRedirect(contextPath + url);
-        }
-        else {
+        } else {
             response.sendRedirect(url);
         }
     }

@@ -1,23 +1,34 @@
 package com.ute.FinalProject.beans;
 
+import java.time.LocalDateTime;
 
 public class Product {
-    private int ProID;
+    private int ProID, UserID,CatID,Status;
     private String ProName, TinyDes, FullDes;
-    private int Price, Quantity, CatID;
+    private float Price,PriceDifference,CurrentPrice;;
+    private LocalDateTime StartDay, EndDay;
 
-    public Product() {
+
+    public Product(int proID, String proName, String tinyDes, String fullDes, float price, float priceDifference, int catID, int userID, LocalDateTime startDay, LocalDateTime endDay,float currentPrice,int status) {
+        this.ProID = proID;
+        this.ProName = proName;
+        this.TinyDes = tinyDes;
+        this.FullDes = fullDes;
+        this.Price = price;
+        this.PriceDifference = priceDifference;
+        this.CatID = catID;
+        this.UserID = userID;
+        this.StartDay = startDay;
+        this.EndDay = endDay;
+        this.CurrentPrice = currentPrice;
+        this.Status = status;
+    }
+    public Product(int proID,int status) {
+        this.ProID = proID;
+        this.Status = status;
     }
 
-    public Product(int proID, String proName, String tinyDes, String fullDes, int price, int quantity, int catID) {
-        ProID = proID;
-        ProName = proName;
-        TinyDes = tinyDes;
-        FullDes = fullDes;
-        Price = price;
-        Quantity = quantity;
-        CatID = catID;
-    }
+
 
     public int getProID() {
         return ProID;
@@ -35,15 +46,31 @@ public class Product {
         return FullDes;
     }
 
-    public int getPrice() {
+    public float getPrice() {
         return Price;
-    }
-
-    public int getQuantity() {
-        return Quantity;
     }
 
     public int getCatID() {
         return CatID;
     }
+
+    public float getPriceDifference() {
+        return PriceDifference;
+    }
+
+    public int getUserID() {return UserID;}
+
+    public LocalDateTime getStartDay() {
+        return StartDay;
+    }
+
+    public LocalDateTime getEndDay() {
+        return EndDay;
+    }
+
+    public float getCurrentPrice() {
+        return CurrentPrice;
+    }
+
+    public int getStatus() { return Status;}
 }
