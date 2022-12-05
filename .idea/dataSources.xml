@@ -8,11 +8,11 @@
       <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="heroku" uuid="f3b0b4b7-51b7-41d3-99f4-7f76e51aa1a2">
+    <data-source source="LOCAL" name="heroku@data" uuid="97f1e998-47dc-477e-b7ec-35e87ea57691">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://us-cdbr-east-06.cleardb.net:3306/heroku_a376b9b87e8aecd</jdbc-url>
+      <jdbc-url>jdbc:mysql://us-cdbr-east-06.cleardb.net:3306/heroku_e05f1cd619b8647</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

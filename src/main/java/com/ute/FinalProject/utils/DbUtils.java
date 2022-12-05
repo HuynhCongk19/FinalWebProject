@@ -4,9 +4,13 @@ import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
 public class DbUtils {
-    static Sql2o sql2o = new Sql2o("jdbc:mysql://us-cdbr-east-06.cleardb.net:3306/heroku_a376b9b87e8aecd", "baea2f57ceeb07" , "5fe7c274");
-    //static Sql2o sql2o = new Sql2o("jdbc:mysql://localhost:3306/huynh", "root" , "");
+    //static Sql2o sql2o = new Sql2o("jdbc:mysql://us-cdbr-east-06.cleardb.net:3306/heroku_29b86e1e5c4bc7b", "b982cea641f865" , "8185de48");
+    static Sql2o sql2o = new Sql2o("jdbc:mysql://us-cdbr-east-06.cleardb.net:3306/heroku_ce843ac9664874d", "b8b15e886845c8" , "6b471d37");
+
     public static Connection getConnection(){
         return sql2o.open();
     }
 }
+
+
+//static Sql2o sql2o = new Sql2o("jdbc:mysql://localhost:3306/huynh", "root" , "");
