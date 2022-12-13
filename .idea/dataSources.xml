@@ -15,5 +15,12 @@
       <jdbc-url>jdbc:mysql://us-cdbr-east-06.cleardb.net:3306/heroku_e05f1cd619b8647</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="heroku@host" uuid="bda81c90-ea4b-476b-b0dc-8008e220dee4">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://us-cdbr-east-06.cleardb.net:3306/heroku_d0a67e5f63ddb70</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
