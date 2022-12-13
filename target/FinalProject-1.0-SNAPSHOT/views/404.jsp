@@ -19,7 +19,7 @@
             <div class="card bot w-50 mx-auto">
                 <div class="card-body">
                     <h1 class="card-title text-danger">Oh noooo!!</h1>
-                    <h4 class="card-text text-danger">404 error: Page not found </h4>
+                    <h4 class="card-text text-danger">404 error: Page not found. </h4>
                     <p class="card-text text-md text-dark">Sorry, the error has occured. The request page not found</p>
                 </div>
                <div class="d-flex align-content-lg-start">
